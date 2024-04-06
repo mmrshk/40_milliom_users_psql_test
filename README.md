@@ -2,11 +2,11 @@
 Compare the speed of selection/insertion using different indexes (no index, btree, hash)
 
 Result:
-| Index type | Execution Time | Result | Insertion time | Result |
-|-----------------|-----------------|-----------------|-----------------|-----------------|
-| No index | 955.997 ms/967.199 ms | slowest | 5.528 ms | medium |
-| BTREE | 18.681 ms/23.183 ms | medium | 2.221 ms | fastest |
-| HASH | 16.091 ms/18.914 ms | fastest  | 13.124 ms | slowest |
+| Index type | Execution Time | Result | Insertion time (synchronous_commit = on) | Result | Insertion time (synchronous_commit = of) | Result |
+|-----------------|-----------------|-----------------|-----------------|-----------------|-----------------|-----------------|
+| No index | 955.997 ms/967.199 ms | slowest | 5.528 ms | medium | 0.573 ms | fastest |
+| BTREE | 18.681 ms/23.183 ms | medium | 2.221 ms | fastest | 0.762 ms| medium |
+| HASH | 16.091 ms/18.914 ms | fastest  | 13.124 ms | slowest |  6.533 ms| slowest | 
 
 
 STEPS:
